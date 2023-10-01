@@ -7,3 +7,4 @@ interface product {
     price: number,
     discount: number,
 }
+
