@@ -9,7 +9,7 @@ export default function Product({ product }: { product: product }) {
 
     // function to convert the discount into price
     const handleDiscount = (price: number, discount: number) => {
-        const discountedPrice = Math.floor( (discount * price) / 100 );
+        const discountedPrice = Math.floor((discount * price) / 100);
         return price - discountedPrice;
     }
 
@@ -17,8 +17,8 @@ export default function Product({ product }: { product: product }) {
     // function to handle add to cart functionality
     const handleAddToCart = (id: number) => {
         setProducts(products.map((item) => {
-            if(item.id === id) {
-                return {...item, quantity: item.quantity + 1}
+            if (item.id === id) {
+                return { ...item, quantity: item.quantity + 1 }
             }
             return item;
         }))
@@ -29,8 +29,8 @@ export default function Product({ product }: { product: product }) {
     // function to handle remove cart functionality
     const handleMinusCart = (id: number) => {
         setProducts(products.map((item) => {
-            if(item.id === id) {
-                return {...item, quantity: item.quantity - 1 <= 0 ? 0 : item.quantity - 1}
+            if (item.id === id) {
+                return { ...item, quantity: item.quantity - 1 <= 0 ? 0 : item.quantity - 1 }
             }
             return item;
         }))
@@ -49,8 +49,8 @@ export default function Product({ product }: { product: product }) {
                 <button onClick={() => handleAddToCart(product.id)} className="py-2 px-4">+</button>
             </div>
             <div className="priceContainer font-medium flex items-center gap-4 justify-center">
-            <span className="line-through  text-gray-500">₹{INTEGER_FORMATTER.format(product.price)}</span>
-            <span>₹{INTEGER_FORMATTER.format(handleDiscount(product.price, product.discount))}</span>
+                <span className="line-through  text-gray-500">₹{INTEGER_FORMATTER.format(product.price)}</span>
+                <span>₹{INTEGER_FORMATTER.format(handleDiscount(product.price, product.discount))}</span>
             </div>
         </div>
     )

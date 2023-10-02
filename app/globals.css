@@ -15,3 +15,32 @@ body {
   filter: drop-shadow(0 1px 8px #00000071) !important;
   object-fit: cover;
 }
+
+
+.cart--btn {
+  position: relative;
+  font-size: 2rem;
+}
+
+
+.cart--btn::after {
+  position: absolute;
+  content: attr(data-cart);
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -3px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #2c2b2b;
+  background: #f883f6;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.cart--btn.showCart::after {
+  opacity: 1;
+}
