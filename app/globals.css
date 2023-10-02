@@ -38,6 +38,7 @@ body {
   color: #2c2b2b;
   background: #f883f6;
   opacity: 0;
+  display: flex;
   transition: 0.3s linear;
 }
 

@@ -4,7 +4,7 @@ import data from '@/data/products.json';
 
 interface ProductState {
     products: product[],
-    cart: product[]
+    cart: product[],
     setProducts: (payload: product[]) => void;
     setCart: () => void;
 }
@@ -12,11 +12,10 @@ interface ProductState {
 
 export const useProductStore = create<ProductState>((set, get) => ({
     products: data.products,
-    cart: [],
+    cart: data.products.filter(product => product.quantity > 0),
     setProducts: (payload) => set((state) => ({products: payload})),
     setCart: () => {
-        const products = get().products;
-        const cart = products.filter((product) => product.quantity > 0);
-        set({cart});
+        console.log(get().cart);
+        set({cart: get().products.filter((product) => product.quantity > 0)});
     }, 
 }))
