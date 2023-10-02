@@ -5,13 +5,13 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(45deg, #f2ebdb, #ded4bd);
+  background: linear-gradient(45deg, #f0e0ef, #eadef0);
 }
 
 
 .productImg {
-  width: 150px !important;
-  height: auto !important;
+  width: auto !important;
+  height: 140px !important;
   filter: drop-shadow(0 1px 8px #00000071) !important;
   object-fit: cover;
 }
