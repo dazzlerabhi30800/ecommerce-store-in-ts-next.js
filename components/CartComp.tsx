@@ -7,11 +7,11 @@ import { useProductStore } from "@/store/ProductStore";
 export default function CartComp({ cart }: { cart: product }) {
     const [addToCart, minusToCart, removeItem] = useProductStore(state => [state.addToCart, state.minusToCart, state.removeItem]);
     return (
-        <div className="cart--item relative flex text-left items-center gap-4 p-2 bg-pink-400 rounded-md shadow-md">
+        <div className="cart--item relative flex text-left items-center gap-4 p-2 bg-pink-300 rounded-md shadow-md">
             <Image width={140} height={80} src={cart.image} alt={cart.name} />
             <div className="flex flex-col gap-4">
                 <h2>{cart.name}</h2>
-                <div className="flex bg-gray-400 rounded-lg items-center text-white w-fit mx-initial font-medium">
+                <div className="flex bg-gray-300 rounded-lg items-center text-black w-fit mx-initial font-medium shadow-xl">
                     <button onClick={() => minusToCart(cart.id)} className="py-2 px-4 border-r-2 border-white">-</button>
                     <span className="py-2 px-4 border-r-2 border-white">{cart.quantity}</span>
                     <button onClick={() => addToCart(cart.id)} className="py-2 px-4">+</button>

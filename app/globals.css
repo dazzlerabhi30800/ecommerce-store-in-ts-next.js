@@ -45,3 +45,9 @@ body {
 .cart--btn.showCart::after {
   opacity: 1;
 }
+
+
+
+.cart--item {
+  width: clamp(300px, 95%, 700px);
+}
