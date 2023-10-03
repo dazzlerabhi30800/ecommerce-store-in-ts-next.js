@@ -5,17 +5,42 @@ import data from '@/data/products.json';
 interface ProductState {
     products: product[],
     cart: product[],
-    setProducts: (payload: product[]) => void;
-    setCart: () => void;
+    addToCart: (id: number) => void;
+    minusToCart: (id: number) => void;
+    removeItem: (id: number) => void;
 }
 
 
 export const useProductStore = create<ProductState>((set, get) => ({
     products: data.products,
     cart: data.products.filter(product => product.quantity > 0),
-    setProducts: (payload) => set((state) => ({products: payload})),
-    setCart: () => {
-        console.log(get().cart);
-        set({cart: get().products.filter((product) => product.quantity > 0)});
-    }, 
+    addToCart: (id) => {
+        let products = get().products.map((product) => {
+            if (product.id === id) {
+                return { ...product, quantity: product.quantity + 1 };
+            }
+            return product;
+        });
+
+        let cart = products.filter(product => product.quantity > 0);
+
+        set({ cart })
+        set({ products })
+    },
+    minusToCart: (id) => {
+        let products = get().products.map((product) => {
+            if (product.id === id) {
+                return { ...product, quantity: product.quantity - 1 <= 0 ? 0 : product.quantity - 1 };
+            }
+            return product;
+        });
+        let cart = products.filter(product => product.quantity > 0);
+
+        set({ products })
+        set({ cart })
+    },
+    removeItem: (id) => {
+        let newCart = get().cart.filter(item => item.id !== id);
+        set({ cart: newCart });
+    }
 }))
