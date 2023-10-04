@@ -4,8 +4,23 @@ import { INTEGER_FORMATTER, handleDiscount } from "@/utils/utils";
 import Image from "next/image";
 
 export default function Product({ product }: { product: product }) {
-    const [products, addToCart, minusToCart] = useProductStore((state) => [state.products, state.addToCart, state.minusToCart]);
+    const [searchString, addToCart, minusToCart] = useProductStore((state) => [state.searchString, state.addToCart, state.minusToCart]);
+    // console.log(searchString);
 
+
+
+    const stringSplit = (product: string) => {
+        const regex = new RegExp(searchString, 'gi');
+        let splitedString = product.split('');
+        const newString = splitedString.map((str, index) => {
+            if (searchString.toLowerCase().includes(str.toLowerCase())) {
+                return <span key={index} className="bg-yellow-500" >{str}</span>
+            }
+            return <span key={index}>{str}</span>
+
+        })
+        return newString;
+    }
 
 
 
@@ -13,7 +28,9 @@ export default function Product({ product }: { product: product }) {
     return (
         <div className="product shadow-lg flex flex-col text-center justify-between gap-4 p-4 bg-white rounded-md min-w-[300px] w-full max-w-[350px] h-[420px]">
             <Image priority={true} className="productImg" quality={100} style={{ width: "auto", height: "auto", margin: "5px auto" }} src={product.image} width={125} height={35} alt={product.name} />
-            <h1 className="font-bold">{product.name}</h1>
+            <h1 className="font-bold">
+                {stringSplit(product.name)}
+            </h1>
             <div className="flex bg-gray-400 rounded-lg items-center text-white w-fit mx-auto font-medium">
                 <button onClick={() => minusToCart(product.id)} className="py-2 px-4 border-r-2 border-white">-</button>
                 <span className="py-2 px-4 border-r-2 border-white">{product.quantity}</span>

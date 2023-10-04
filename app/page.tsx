@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [products, searchString] = useProductStore((state) => [state.products, state.searchString])
   const [productState, setProductState] = useState<product[]>([]);
-  console.log(searchString);
   useEffect(() => {
     setProductState(products);
   }, [products]);
