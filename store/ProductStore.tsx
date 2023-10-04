@@ -6,9 +6,11 @@ import { persist, createJSONStorage, devtools } from 'zustand/middleware';
 interface ProductState {
     products: product[],
     cart: product[],
+    searchString: string;
     addToCart: (id: number) => void;
     minusToCart: (id: number) => void;
     removeItem: (id: number) => void;
+    setSearchString: (value: string) => void;
 }
 
 
@@ -18,6 +20,7 @@ export const useProductStore = create<ProductState>()(
             (set, get) => ({
                 products: data.products,
                 cart: [],
+                searchString: "",
                 addToCart: (id) => {
                     let products = get().products.map((product) => {
                         if (product.id === id) {
@@ -53,11 +56,15 @@ export const useProductStore = create<ProductState>()(
                     })
                     set({ cart: newCart });
                     set({ products })
-                }
+                },
+                setSearchString: (value: string) => {
+                    set({ searchString: value })
+                },
             }),
             {
                 name: "products",
-                storage: createJSONStorage(() => sessionStorage),
+                partialize: (state) => ({ products: state.products, cart: state.cart, addToCart: state.addToCart, minusToCart: state.minusToCart, removeItem: state.removeItem }),
+                // storage: createJSONStorage(() => sessionStorage),
             }
-        )
+        ),
     ))

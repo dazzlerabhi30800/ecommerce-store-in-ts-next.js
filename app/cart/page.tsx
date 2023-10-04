@@ -8,6 +8,7 @@ export default function Page() {
   const [isClient, setIsClient] = useState(false);
   const [cartState, setCartState] = useState<product[]>([]);
 
+
   // Hydration problem fix
   useEffect(() => {
     setIsClient(true);
