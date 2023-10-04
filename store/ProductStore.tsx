@@ -17,7 +17,7 @@ export const useProductStore = create<ProductState>()(
         persist(
             (set, get) => ({
                 products: data.products,
-                cart: data.products.filter(product => product.quantity > 0),
+                cart: [],
                 addToCart: (id) => {
                     let products = get().products.map((product) => {
                         if (product.id === id) {
@@ -45,7 +45,14 @@ export const useProductStore = create<ProductState>()(
                 },
                 removeItem: (id) => {
                     let newCart = get().cart.filter(item => item.id !== id);
+                    let products = get().products.map((item) => {
+                        if (item.id === id) {
+                            return { ...item, quantity: 0 }
+                        }
+                        return item;
+                    })
                     set({ cart: newCart });
+                    set({ products })
                 }
             }),
             {
