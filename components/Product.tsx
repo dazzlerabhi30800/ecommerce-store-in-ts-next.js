@@ -8,6 +8,8 @@ export default function Product({ product }: { product: product }) {
 
 
 
+
+
     const stringSplit = (product: string) => {
         const regex = new RegExp(searchString, 'gi');
         let splitedString = product.split('');
