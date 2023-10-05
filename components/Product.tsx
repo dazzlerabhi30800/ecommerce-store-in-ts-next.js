@@ -5,7 +5,6 @@ import Image from "next/image";
 
 export default function Product({ product }: { product: product }) {
     const [searchString, addToCart, minusToCart] = useProductStore((state) => [state.searchString, state.addToCart, state.minusToCart]);
-    // console.log(searchString);
 
 
 
@@ -14,7 +13,7 @@ export default function Product({ product }: { product: product }) {
         let splitedString = product.split('');
         const newString = splitedString.map((str, index) => {
             if (searchString.toLowerCase().includes(str.toLowerCase())) {
-                return <span key={index} className="bg-yellow-500" >{str}</span>
+                return <span key={index} className="bg-yellow-300" >{str}</span>
             }
             return <span key={index}>{str}</span>
 
