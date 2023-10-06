@@ -3,7 +3,7 @@ import { useProductStore } from "@/store/ProductStore";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { AiOutlineShoppingCart, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineShoppingCart, AiOutlineSearch, AiOutlineHome } from "react-icons/ai";
 
 
 
@@ -46,13 +46,13 @@ export default function Navbar() {
                     <button onClick={handleShowSearch} className="text-xl md:cursor-pointer"><AiOutlineSearch /></button>
                 </form>
             }
-            <div className="links--container text-sm md:text-lg flex gap-4 items-center">
-                {/* <Link
+            <div className="links--container text-lg md:text-2xl flex gap-4 items-center">
+                <Link
                     className="font-medium hover:underline hover:text-gray-600"
                     href="/"
                 >
-                    Home
-                </Link> */}
+                    <AiOutlineHome />
+                </Link>
                 <Link
                     href="/cart"
                     data-cart={cartLength}

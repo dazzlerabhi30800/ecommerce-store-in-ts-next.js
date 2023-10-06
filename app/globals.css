@@ -16,10 +16,13 @@ body {
   object-fit: cover;
 }
 
+.links--container a {
+  font-size: 2rem;
+}
+
 
 .cart--btn {
   position: relative;
-  font-size: 2rem;
 }
 
 
