@@ -46,9 +46,9 @@ export default function Navbar() {
                     <button onClick={handleShowSearch} className="text-xl md:cursor-pointer"><AiOutlineSearch /></button>
                 </form>
             }
-            <div className="links--container text-lg md:text-2xl flex gap-4 items-center">
+            <div className="links--container flex gap-4 items-center">
                 <Link
-                    className="font-medium hover:underline hover:text-gray-600"
+                    className="font-medium hidden md:block hover:underline hover:text-gray-600"
                     href="/"
                 >
                     <AiOutlineHome />
