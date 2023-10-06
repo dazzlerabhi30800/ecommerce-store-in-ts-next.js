@@ -1,34 +1,29 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-import PaymentForm from '@/components/PaymentForm';
-import { useProductStore } from '@/store/ProductStore';
-import { handleDiscount } from '@/utils/utils';
-import { INTEGER_FORMATTER } from '@/utils/utils';
+"use client";
+import axios from 'axios';
+import ElementForm from '@/components/ElementForm';
+import { useEffect, useState } from 'react';
+import { create } from 'domain';
 
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+async function createPaymentIntent() {
+    const { data } = await axios.post("/api/create-payment-intent", {
+        data: { amount: 499 },
+    });
+    return data;
+}
 
 export default function Checkout() {
-    const [cart] = useProductStore(state => [state.cart]);
-    const [cartState, setCartState] = useState<product[]>([]);
+    const [clientSecret, setClientSecret] = useState<string | null>(null);
     useEffect(() => {
-        setCartState(cart);
-    }, [cart])
-
-
-    const totalPrice = cartState.reduce((acc, item) => {
-        return acc + (handleDiscount(item.price, item.discount) * item.quantity)
-    }, 0)
-
+        createPaymentIntent().then(data => setClientSecret(data));
+    }, [])
     return (
         <div className='bg-sky-100 flex flex-col gap-6 mx-auto p-3 text-center rounded-md shadow-md w-[95%] max-w-[600px]'>
-            <h1 className='font-bold my-2 text-xl'>Total Amount - ${INTEGER_FORMATTER.format(totalPrice)}</h1>
-            <Elements stripe={stripePromise} >
-                <PaymentForm amount={totalPrice} />
-            </Elements>
-        </div>
+            <h1>Hello Payment</h1>
+            {clientSecret &&
+                <ElementForm clientSecret={clientSecret} />
+            }
+        </div >
     )
 }
 
