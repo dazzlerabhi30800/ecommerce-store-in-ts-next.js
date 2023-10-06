@@ -38,8 +38,8 @@ export default function Product({ product }: { product: product }) {
                 <button onClick={() => addToCart(product.id)} className="py-2 px-4">+</button>
             </div>
             <div className="priceContainer font-medium flex items-center gap-4 justify-center">
-                <span className="line-through  text-gray-500">₹{INTEGER_FORMATTER.format(product.price)}</span>
-                <span>₹{INTEGER_FORMATTER.format(handleDiscount(product.price, product.discount))}</span>
+                <span className="line-through  text-gray-500">${INTEGER_FORMATTER.format(product.price)}</span>
+                <span>${INTEGER_FORMATTER.format(handleDiscount(product.price, product.discount))}</span>
             </div>
         </div>
     )

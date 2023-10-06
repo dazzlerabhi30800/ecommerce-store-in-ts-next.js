@@ -38,7 +38,7 @@ export default function Page() {
           <CartComp key={index} cart={item} />
         ))}
       </div>
-      <h2 className="font-bold text-xl">Total Price - ₹{INTEGER_FORMATTER.format(totalPrice)}</h2>
+      <h2 className="font-bold text-xl">Total Price - ${INTEGER_FORMATTER.format(totalPrice)}</h2>
       {cartState.length > 0 &&
         <Link className="text-lg text-white bg-purple-500 w-fit mx-auto p-2 px-4 rounded-md shadow-md  md:hover:bg-sky-500" href="/checkout">Proceed to Checkout</Link>
       }

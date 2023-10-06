@@ -17,7 +17,7 @@ export default function CartComp({ cart }: { cart: product }) {
                     <button onClick={() => addToCart(cart.id)} className="py-2 px-4">+</button>
                 </div>
                 <div className="font-bold">
-                    ₹{INTEGER_FORMATTER.format((handleDiscount(cart.price, cart.discount)) * cart.quantity)}
+                    ${INTEGER_FORMATTER.format((handleDiscount(cart.price, cart.discount)) * cart.quantity)}
                 </div>
             </div>
             <button onClick={() => removeItem(cart.id)} className="removeBtn text-2xl text-gray-800 absolute top-5 right-5 transition ease-in-out duration-300 hover:text-gray-600 md:cursor-pointer">

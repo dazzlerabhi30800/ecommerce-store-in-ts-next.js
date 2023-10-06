@@ -26,7 +26,7 @@ export default function Checkout() {
 
     return (
         <div className='bg-sky-100 flex flex-col gap-4 mx-auto p-2 text-center rounded-md shadow-md w-[95%] max-w-[600px]'>
-            <h1 className='font-bold text-xl'>Total Amount - ₹{INTEGER_FORMATTER.format(totalPrice)}</h1>
+            <h1 className='font-bold text-xl'>Total Amount - ${INTEGER_FORMATTER.format(totalPrice)}</h1>
             <Elements stripe={stripePromise} >
                 <PaymentForm amount={totalPrice} />
             </Elements>

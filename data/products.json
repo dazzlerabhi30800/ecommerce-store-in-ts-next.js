@@ -6,7 +6,7 @@
       "stock": true,
       "image": "/product-imgs/sweatshirt.png",
       "quantity": 0,
-      "price": 1399,
+      "price": 119,
       "discount": 22
     },
     {
@@ -15,7 +15,7 @@
       "stock": true,
       "image": "/product-imgs/majestic-formal-shirt.png",
       "quantity": 0,
-      "price": 799,
+      "price": 79,
       "discount": 12
     },
 
@@ -25,7 +25,7 @@
       "stock": true,
       "image": "/product-imgs/leotude-tshirt.png",
       "quantity": 0,
-      "price": 269,
+      "price": 59,
       "discount": 17
     },
 
@@ -35,7 +35,7 @@
       "stock": true,
       "image": "/product-imgs/london-hills-solid-tshirt.png",
       "quantity": 0,
-      "price": 189,
+      "price": 39,
       "discount": 15
     },
 
@@ -45,7 +45,7 @@
       "stock": true,
       "image": "/product-imgs/apple-iphone-14.png",
       "quantity": 0,
-      "price": 66499,
+      "price": 989,
       "discount": 25
     },
 
@@ -55,7 +55,7 @@
       "stock": true,
       "image": "/product-imgs/realme-narzo-60.png",
       "quantity": 0,
-      "price": 17999,
+      "price": 259,
       "discount": 32
     },
 
@@ -65,7 +65,7 @@
       "stock": true,
       "image": "/product-imgs/one-plus-11.png",
       "quantity": 0,
-      "price": 61999,
+      "price": 799,
       "discount": 19
     },
 
@@ -75,7 +75,7 @@
       "stock": true,
       "image": "/product-imgs/one-plus-11R.png",
       "quantity": 0,
-      "price": 44998,
+      "price": 539,
       "discount": 20
     },
     {
@@ -84,7 +84,7 @@
       "stock": true,
       "image": "/product-imgs/samsung-mobile.png",
       "quantity": 0,
-      "price": 44998,
+      "price": 699,
       "discount": 25
     },
     {
@@ -93,7 +93,7 @@
       "stock": true,
       "image": "/product-imgs/beardo-charcoal-face-wash.png",
       "quantity": 0,
-      "price": 190,
+      "price": 12,
       "discount": 31
     },
 
@@ -103,7 +103,7 @@
       "stock": true,
       "image": "/product-imgs/minimalist-face-wash.png",
       "quantity": 0,
-      "price": 539,
+      "price": 15,
       "discount": 10
     },
     {
@@ -112,7 +112,7 @@
       "stock": true,
       "image": "/product-imgs/mama-earth-vitamin-c-face-wash.png",
       "quantity": 0,
-      "price": 318,
+      "price": 14,
       "discount": 20
     },
     {
@@ -121,7 +121,7 @@
       "stock": true,
       "image": "/product-imgs/wow-apple-cider-face-wash.png",
       "quantity": 0,
-      "price": 199,
+      "price": 14,
       "discount": 49
     },
     {
@@ -130,7 +130,7 @@
       "stock": true,
       "image": "/product-imgs/blue-lock-manga-volume-1.jpg",
       "quantity": 0,
-      "price": 618,
+      "price": 20,
       "discount": 20
     },
     {
@@ -139,7 +139,7 @@
       "stock": true,
       "image": "/product-imgs/one-punch-man-manga-volume-1.jpg",
       "quantity": 0,
-      "price": 396,
+      "price": 19,
       "discount": 15
     },
     {
@@ -148,7 +148,7 @@
       "stock": true,
       "image": "/product-imgs/naruto-manga-volume-1.jpg",
       "quantity": 0,
-      "price": 560,
+      "price": 24,
       "discount": 20
     },
     {
@@ -157,7 +157,7 @@
       "stock": true,
       "image": "/product-imgs/jujutsu-kaisen-manga.jpg",
       "quantity": 0,
-      "price": 497,
+      "price": 25,
       "discount": 20
     },
 
@@ -167,7 +167,7 @@
       "stock": true,
       "image": "/product-imgs/atomic-habits.jpg",
       "quantity": 0,
-      "price": 399,
+      "price": 10,
       "discount": 15
     },
 
@@ -177,7 +177,7 @@
       "stock": true,
       "image": "/product-imgs/psychology-of-money.jpg",
       "quantity": 0,
-      "price": 259,
+      "price": 9,
       "discount": 10
     },
 
@@ -187,7 +187,7 @@
       "stock": true,
       "image": "/product-imgs/xiomi-notebook-ultra-laptop.png",
       "quantity": 0,
-      "price": 46999,
+      "price": 459,
       "discount": 39
     },
     {
@@ -196,7 +196,7 @@
       "stock": true,
       "image": "/product-imgs/msi-cyborg-laptop.png",
       "quantity": 0,
-      "price": 62990,
+      "price": 599,
       "discount": 30
     },
     {
@@ -205,7 +205,7 @@
       "stock": true,
       "image": "/product-imgs/honor-magic-laptop.png",
       "quantity": 0,
-      "price": 39990,
+      "price": 479,
       "discount": 44
     },
     {
@@ -214,7 +214,7 @@
       "stock": true,
       "image": "/product-imgs/hp15-laptop.png",
       "quantity": 0,
-      "price": 64990,
+      "price": 699,
       "discount": 15
     },
     {
@@ -223,7 +223,7 @@
       "stock": true,
       "image": "/product-imgs/dell-g15-laptop.png",
       "quantity": 0,
-      "price": 72990,
+      "price": 739,
       "discount": 28
     },
     {
@@ -232,7 +232,7 @@
       "stock": true,
       "image": "/product-imgs/lenovo-slim3-laptop.png",
       "quantity": 0,
-      "price": 50990,
+      "price": 749,
       "discount": 34
     },
     {
@@ -241,7 +241,7 @@
       "stock": true,
       "image": "/product-imgs/boat-immortal-tws.png",
       "quantity": 0,
-      "price": 1398,
+      "price": 30,
       "discount": 60
     },
     {
@@ -250,7 +250,7 @@
       "stock": true,
       "image": "/product-imgs/jbl-wave-tws.png",
       "quantity": 0,
-      "price": 2298,
+      "price": 50,
       "discount": 62
     },
     {
@@ -259,7 +259,7 @@
       "stock": true,
       "image": "/product-imgs/jbl-tune-tws.png",
       "quantity": 0,
-      "price": 4988,
+      "price": 60,
       "discount": 38
     },
     {
@@ -268,7 +268,7 @@
       "stock": true,
       "image": "/product-imgs/jbl-earphones.png",
       "quantity": 0,
-      "price": 598,
+      "price": 65,
       "discount": 54
     },
     {
@@ -277,7 +277,7 @@
       "stock": true,
       "image": "/product-imgs/realme-buds2.png",
       "quantity": 0,
-      "price": 598,
+      "price": 34,
       "discount": 25
     },
     {
@@ -286,7 +286,7 @@
       "stock": true,
       "image": "/product-imgs/luxur-gaming-chair.png",
       "quantity": 0,
-      "price": 17946,
+      "price": 249,
       "discount": 49
     },
     {
@@ -295,7 +295,7 @@
       "stock": true,
       "image": "/product-imgs/drogo-gaming-chair.png",
       "quantity": 0,
-      "price": 12490,
+      "price": 299,
       "discount": 54
     },
     {
@@ -304,7 +304,7 @@
       "stock": true,
       "image": "/product-imgs/night-hawk-gaming-chair.png",
       "quantity": 0,
-      "price": 11490,
+      "price": 199,
       "discount": 52
     }
   ]
