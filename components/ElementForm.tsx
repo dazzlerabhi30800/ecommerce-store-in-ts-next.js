@@ -19,8 +19,10 @@ export default function ElementForm({ clientSecret }: { clientSecret: string }) 
         return acc + (handleDiscount(item.price, item.discount) * item.quantity)
     }, 0)
 
+
     return (
-        <Elements stripe={stripePromise} options={{ clientSecret: clientSecret, appearance: { theme: "stripe" } }}> <PaymentForm amount={totalPrice} />
-        </Elements>
+        <Elements stripe={stripePromise} options={{ clientSecret: clientSecret, appearance: { theme: "stripe" } }}>
+            <PaymentForm amount={totalPrice} />
+        </Elements >
     )
 }

@@ -1,4 +1,4 @@
-import { CardElement, Elements, PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { PaymentElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from 'axios';
 
@@ -34,8 +34,7 @@ export default function PaymentForm({ amount }: { amount: number }) {
     return (
         <>
             <form className="flex flex-col p-2 gap-8" onSubmit={onSubmit}>
-                <PaymentElement />
-                {/* <CardElement /> */}
+                <PaymentElement options={{ layout: { type: 'accordion' } }} />
                 <button className="py-3 px-10 transition ease-in-out duration-300 md:hover:bg-rose-400 md:cursor-pointer text-black bg-rose-300 rounded-md w-fit mx-auto font-bold" type="submit">Pay ${amount}</button>
             </form>
         </>

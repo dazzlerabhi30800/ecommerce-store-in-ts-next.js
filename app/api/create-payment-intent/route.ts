@@ -16,6 +16,10 @@ export async function POST(req: NextRequest) {
         const paymentIntent = await stripe.paymentIntents.create({
             amount: Number(amount) * 100,
             currency: "USD",
+            payment_method_configuration: 'pmc_1NxsYCSCjGfm4lCeuNh88NqG',
+            automatic_payment_methods : {
+                enabled: true,
+            },
         });
         return new NextResponse(paymentIntent.client_secret, {status: 200});
     }
