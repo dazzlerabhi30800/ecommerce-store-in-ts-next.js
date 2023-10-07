@@ -40,20 +40,22 @@ export default function Navbar() {
             {!showSearch &&
                 <img src="./logo.svg" alt="shopsy" className="w-[130px] h-[45px] " />
             }
-            {pathname === '/' &&
-                <form onClick={(e) => e.preventDefault()} className={`flex items-center ${showSearch && "border-b w-full justify-between"} border-gray-400`}>
-                    <input ref={inputRef} type="text" onChange={(e) => setSearchString(e.target.value)} value={searchString} placeholder="Search Products..." className={`bg-transparent px-4 placeholder:text-gray-600 text-black focus:outline-none focus:border-none  ${showSearch ? "block" : "hidden"}`} />
-                    <button onClick={handleShowSearch} className="text-xl md:cursor-pointer"><AiOutlineSearch /></button>
-                </form>
-            }
-            {!showSearch &&
-                <div className="links--container flex gap-4 items-center">
+            <div className={`links--container flex gap-5 md:gap-10 items-center ${showSearch && 'w-full'}`}>
+                {pathname === '/' &&
+                    <form onClick={(e) => e.preventDefault()} className={`flex items-center ${showSearch && "border-b w-full justify-between"} border-gray-400`}>
+                        <input ref={inputRef} type="text" onChange={(e) => setSearchString(e.target.value)} value={searchString} placeholder="Search Products..." className={`bg-transparent px-4 placeholder:text-gray-600 text-black focus:outline-none focus:border-none  ${showSearch ? "block" : "hidden"}`} />
+                        <button onClick={handleShowSearch} className="text-[1.5rem] md:text-[1.7rem] md:cursor-pointer"><AiOutlineSearch /></button>
+                    </form>
+                }
+                {!showSearch &&
                     <Link
                         className="font-medium  hover:underline hover:text-gray-600"
                         href="/"
                     >
                         <AiOutlineHome />
                     </Link>
+                }
+                {!showSearch &&
                     <Link
                         href="/cart"
                         data-cart={cartLength}
@@ -62,8 +64,8 @@ export default function Navbar() {
                     >
                         <AiOutlineShoppingCart />
                     </Link>
-                </div>
-            }
+                }
+            </div>
         </nav>
     );
 }
