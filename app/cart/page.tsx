@@ -31,9 +31,9 @@ export default function Page() {
   }, 0)
 
   return (
-    <div className="cart-page p-4 text-center flex flex-col gap-4 ">
+    <div className="cart-page py-2 md:p-4 text-center flex flex-col gap-4 ">
       <h1 className="font-bold text-2xl">Cart Items : {cartState.length}</h1>
-      <div className="flex flex-col gap-4 items-center p-4">
+      <div className="flex flex-col gap-4 items-center p-2 md:p-4">
         {isClient && cartState.map((item, index) => (
           <CartComp key={index} cart={item} />
         ))}
