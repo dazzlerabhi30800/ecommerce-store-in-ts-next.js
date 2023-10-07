@@ -38,7 +38,7 @@ export default function Navbar() {
     return (
         <nav className="py-2 px-1 md:px-6 flex justify-between items-center">
             {!showSearch &&
-                <img src="./logo.svg" alt="shopsy" className="w-[150px] h-[40px] " />
+                <img src="./logo.svg" alt="shopsy" className="w-[130px] h-[45px] " />
             }
             {pathname === '/' &&
                 <form onClick={(e) => e.preventDefault()} className={`flex items-center ${showSearch && "border-b w-full justify-between"} border-gray-400`}>

@@ -18,7 +18,7 @@ export default function Checkout() {
         createPaymentIntent().then(data => setClientSecret(data));
     }, [])
     return (
-        <div className='bg-sky-100 flex flex-col gap-6 mx-auto p-3 text-center rounded-md shadow-md w-[95%] max-w-[600px]'>
+        <div className='bg-sky-100 flex flex-col gap-6 mx-auto p-3 my-6 text-center rounded-md shadow-md w-[95%] max-w-[600px]'>
             <h1 className='font-bold text-xl'>Payment Gateway</h1>
             {clientSecret &&
                 <ElementForm clientSecret={clientSecret} />
