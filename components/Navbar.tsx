@@ -36,32 +36,34 @@ export default function Navbar() {
 
 
     return (
-        <nav className="py-2 px-2 md:px-6 flex justify-between items-center">
-            <Link href="/">
-                <img src="./logo.svg" alt="shopsy" className="w-auto h-[45px] " />
-            </Link>
+        <nav className="py-2 px-1 md:px-6 flex justify-between items-center">
+            {!showSearch &&
+                <img src="./logo.svg" alt="shopsy" className="w-[150px] h-[40px] " />
+            }
             {pathname === '/' &&
-                <form onClick={(e) => e.preventDefault()} className={`flex items-center ${showSearch && "border-b"} border-gray-400`}>
-                    <input ref={inputRef} type="text" onChange={(e) => setSearchString(e.target.value)} value={searchString} placeholder="Search Products..." className={`bg-transparent px-4 placeholder:text-gray-600 text-black focus:outline-none focus:border-none  ${showSearch ? "visiblle" : "invisible"}`} />
+                <form onClick={(e) => e.preventDefault()} className={`flex items-center ${showSearch && "border-b w-full justify-between"} border-gray-400`}>
+                    <input ref={inputRef} type="text" onChange={(e) => setSearchString(e.target.value)} value={searchString} placeholder="Search Products..." className={`bg-transparent px-4 placeholder:text-gray-600 text-black focus:outline-none focus:border-none  ${showSearch ? "block" : "hidden"}`} />
                     <button onClick={handleShowSearch} className="text-xl md:cursor-pointer"><AiOutlineSearch /></button>
                 </form>
             }
-            <div className="links--container flex gap-4 items-center">
-                <Link
-                    className="font-medium hidden md:block hover:underline hover:text-gray-600"
-                    href="/"
-                >
-                    <AiOutlineHome />
-                </Link>
-                <Link
-                    href="/cart"
-                    data-cart={cartLength}
-                    className={`font-medium cart--btn ${cartLength > 0 && "showCart"
-                        } hover:underline hover:text-gray-600`}
-                >
-                    <AiOutlineShoppingCart />
-                </Link>
-            </div>
+            {!showSearch &&
+                <div className="links--container flex gap-4 items-center">
+                    <Link
+                        className="font-medium  hover:underline hover:text-gray-600"
+                        href="/"
+                    >
+                        <AiOutlineHome />
+                    </Link>
+                    <Link
+                        href="/cart"
+                        data-cart={cartLength}
+                        className={`font-medium cart--btn ${cartLength > 0 && "showCart"
+                            } hover:underline hover:text-gray-600`}
+                    >
+                        <AiOutlineShoppingCart />
+                    </Link>
+                </div>
+            }
         </nav>
     );
 }
