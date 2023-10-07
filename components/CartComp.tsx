@@ -7,8 +7,8 @@ import { useProductStore } from "@/store/ProductStore";
 export default function CartComp({ cart }: { cart: product }) {
     const [addToCart, minusToCart, removeItem] = useProductStore(state => [state.addToCart, state.minusToCart, state.removeItem]);
     return (
-        <div className="cart--item relative flex text-left items-center gap-4 p-2 bg-pink-300 rounded-md shadow-md">
-            <Image priority={true} style={{ width: "auto", height: "120px" }} width={140} height={50} src={cart.image} alt={cart.name} />
+        <div className="cart--item relative flex text-left items-center gap-6 p-2 bg-pink-300 rounded-md shadow-md">
+            <Image priority={true} style={{ width: "auto", height: "130px" }} width={140} height={50} src={cart.image} alt={cart.name} />
             <div className="flex flex-col gap-4">
                 <h2 className="text-sm md:text-base">{cart.name}</h2>
                 <div className="flex bg-gray-300 rounded-lg items-center text-black text-sm md:text-base w-fit mx-initial font-medium shadow-xl">
