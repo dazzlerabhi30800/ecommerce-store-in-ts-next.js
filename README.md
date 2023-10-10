@@ -15,6 +15,6 @@ You can add, remove Items in a cart , this functionality was created using zusta
 
 ## Images
 
-![Home Page](/home-page.png, "This is Home Page of Shopsy")
-![Cart Page](/cart-page.png, "This is Cart Page of Shopsy")
-![Checkout Page](/checkout-page.png, "This is Checkout Page of Shopsy")
+![Home Page](/public/home-page.png, "This is Home Page of Shopsy")
+![Cart Page](/public/cart-page.png, "This is Cart Page of Shopsy")
+![Checkout Page](/public/checkout-page.png, "This is Checkout Page of Shopsy")
