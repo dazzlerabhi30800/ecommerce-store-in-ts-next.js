@@ -1,6 +1,6 @@
 # E-Commerce Site - Shopsy
 
-## This project created using Typescript, Zustand, Next.js & Stripe Checkout Payment
+## This project created using Typescript, Zustand, Taliwind Css, Next.js & Stripe Checkout Payment
 
 You can add, remove Items in a cart , this functionality was created using zustand state management, after adding products to your cart, navigate to cart page using cart icon on navbar from that head to checkout page using checkout page link at the bottom of the cart page, then u will see the stripe payment checkout component.
 
