@@ -35,6 +35,8 @@ export default function Navbar() {
     }
 
 
+
+
     return (
         <nav className="py-2 px-1 md:px-6 flex justify-between items-center">
             {!showSearch &&
