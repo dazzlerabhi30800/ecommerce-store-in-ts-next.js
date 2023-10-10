@@ -7,7 +7,7 @@ You can add, remove Items in a cart , this functionality was created using zusta
 ## How to run locally on your machine
 
 1. First fork or clone the repo inside the root folder run the command `npm install`
-2. Create a .env.local file & create two variables `Next_PUBLIC_STRIPE_PUBLISHABLE_KEY` & `STRIPE_SECREET_KEY`
+2. Create a .env.local file & create two variables `Next_PUBLIC_STRIPE_PUBLISHABLE_KEY` & `STRIPE_SECRET_KEY`
 3. Head over to stripe official website [Stripe Website](https://stripe.com/en-in) , create an account get publishable key & secret key
 4. After completing all the above mentioned steps run the server using command `npm run dev`
 
