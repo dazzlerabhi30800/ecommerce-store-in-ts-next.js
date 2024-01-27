@@ -2,7 +2,7 @@
 import axios from 'axios';
 import ElementForm from '@/components/ElementForm';
 import { useEffect, useState } from 'react';
-import { create } from 'domain';
+
 
 
 async function createPaymentIntent() {

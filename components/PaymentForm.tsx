@@ -7,9 +7,6 @@ export default function PaymentForm({ amount }: { amount: number }) {
     const stripe = useStripe();
     const elements = useElements();
 
-
-
-
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!stripe || !elements) return null;

@@ -10,6 +10,9 @@ export default function CartComp({ cart }: { cart: product }) {
     state.minusToCart,
     state.removeItem,
   ]);
+
+
+
   return (
     <div className="cart--item relative flex text-left items-center gap-6 p-2 bg-pink-300 rounded-md shadow-md">
       <Image
